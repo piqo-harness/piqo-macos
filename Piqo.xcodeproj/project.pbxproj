@@ -1,0 +1,64 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 77;
+	objects = {
+
+		A10000000000000000000001 /* PiqoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* PiqoApp.swift */; };
+		A10000000000000000000002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* RootView.swift */; };
+		A10000000000000000000003 /* SessionWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* SessionWindow.swift */; };
+		A10000000000000000000004 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* SettingsView.swift */; };
+		A10000000000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* Assets.xcassets */; };
+		A10000000000000000000006 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* Localizable.strings */; };
+		A10000000000000000000007 /* PiqoProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = A60000000000000000000001 /* PiqoProtocol */; };
+		A10000000000000000000008 /* PiqoRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = A60000000000000000000002 /* PiqoRuntime */; };
+		A10000000000000000000009 /* PiqoData in Frameworks */ = {isa = PBXBuildFile; productRef = A60000000000000000000003 /* PiqoData */; };
+		A10000000000000000000010 /* PiqoPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = A60000000000000000000004 /* PiqoPresentation */; };
+		A10000000000000000000011 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = A60000000000000000000005 /* Sparkle */; };
+
+		A20000000000000000000001 /* PiqoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiqoApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* SessionWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionWindow.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000007 /* Piqo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Piqo.entitlements; sourceTree = "<group>"; };
+		A20000000000000000000009 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A20000000000000000000010 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A20000000000000000000011 /* Piqo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piqo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		A30000000000000000000001 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000007 /* PiqoProtocol in Frameworks */, A10000000000000000000008 /* PiqoRuntime in Frameworks */, A10000000000000000000009 /* PiqoData in Frameworks */, A10000000000000000000010 /* PiqoPresentation in Frameworks */, A10000000000000000000011 /* Sparkle in Frameworks */); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000002 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000005 /* Assets.xcassets in Resources */, A10000000000000000000006 /* Localizable.strings in Resources */); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000003 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* PiqoApp.swift in Sources */, A10000000000000000000002 /* RootView.swift in Sources */, A10000000000000000000003 /* SessionWindow.swift in Sources */, A10000000000000000000004 /* SettingsView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000004 = {isa = PBXShellScriptBuildPhase; buildActionMask = 2147483647; files = (); inputPaths = (); name = "Embed verified sidecar"; outputPaths = (); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "if [ -x \"$SRCROOT/.build/sidecar/piqo-server\" ]; then\n  mkdir -p \"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH/Helpers\"\n  cp \"$SRCROOT/.build/sidecar/piqo-server\" \"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH/Helpers/piqo-server\"\nfi\n"; };
+		A30000000000000000000005 /* Embed Sparkle framework */ = {isa = PBXShellScriptBuildPhase; buildActionMask = 2147483647; files = (); inputPaths = (); name = "Embed Sparkle framework"; outputPaths = (); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "framework=\"$BUILT_PRODUCTS_DIR/Sparkle.framework\"\ndestination=\"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/Sparkle.framework\"\nif [ -d \"$framework\" ]; then\n  mkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"\n  rm -rf \"$destination\"\n  ditto \"$framework\" \"$destination\"\n  identity=\"${EXPANDED_CODE_SIGN_IDENTITY:--}\"\n  codesign --force --sign \"$identity\" --preserve-metadata=identifier,entitlements,flags \"$destination\"\nfi\n"; };
+
+		A40000000000000000000001 = {isa = PBXGroup; children = (A40000000000000000000002 /* Piqo */, A40000000000000000000003 /* Products */); sourceTree = "<group>"; };
+		A40000000000000000000002 /* Piqo */ = {isa = PBXGroup; children = (A40000000000000000000004 /* Sources */, A40000000000000000000005 /* Supporting */, A20000000000000000000005 /* Assets.xcassets */, A20000000000000000000008 /* Localizable.strings */); path = Piqo; sourceTree = "<group>"; };
+		A40000000000000000000003 /* Products */ = {isa = PBXGroup; children = (A20000000000000000000011 /* Piqo.app */); name = Products; sourceTree = "<group>"; };
+		A40000000000000000000004 /* Sources */ = {isa = PBXGroup; children = (A20000000000000000000001 /* PiqoApp.swift */, A20000000000000000000002 /* RootView.swift */, A20000000000000000000003 /* SessionWindow.swift */, A20000000000000000000004 /* SettingsView.swift */); path = Sources; sourceTree = "<group>"; };
+		A40000000000000000000005 /* Supporting */ = {isa = PBXGroup; children = (A20000000000000000000006 /* Info.plist */, A20000000000000000000007 /* Piqo.entitlements */); path = Supporting; sourceTree = "<group>"; };
+		A20000000000000000000008 /* Localizable.strings */ = {isa = PBXVariantGroup; children = (A20000000000000000000009 /* en */, A20000000000000000000010 /* fr */); name = Localizable.strings; sourceTree = "<group>"; };
+
+		A50000000000000000000001 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 2600; LastUpgradeCheck = 2600; TargetAttributes = {A50000000000000000000002 = {CreatedOnToolsVersion = 26.6;};};}; buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject "Piqo" */; compatibilityVersion = "Xcode 16.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, fr, Base); mainGroup = A40000000000000000000001; minimizedProjectReferenceProxies = 1; packageReferences = (A80000000000000000000001 /* XCLocalSwiftPackageReference "PiqoKit" */, A80000000000000000000002 /* XCRemoteSwiftPackageReference "Sparkle" */); preferredProjectObjectVersion = 77; productRefGroup = A40000000000000000000003 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (A50000000000000000000002 /* Piqo */); };
+		A50000000000000000000002 /* Piqo */ = {isa = PBXNativeTarget; buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget "Piqo" */; buildPhases = (A30000000000000000000003 /* Sources */, A30000000000000000000001 /* Frameworks */, A30000000000000000000002 /* Resources */, A30000000000000000000005 /* Embed Sparkle framework */, A30000000000000000000004 /* Embed verified sidecar */); buildRules = (); dependencies = (); name = Piqo; packageProductDependencies = (A60000000000000000000001 /* PiqoProtocol */, A60000000000000000000002 /* PiqoRuntime */, A60000000000000000000003 /* PiqoData */, A60000000000000000000004 /* PiqoPresentation */, A60000000000000000000005 /* Sparkle */); productName = Piqo; productReference = A20000000000000000000011 /* Piqo.app */; productType = "com.apple.product-type.application"; };
+
+		A60000000000000000000001 /* PiqoProtocol */ = {isa = XCSwiftPackageProductDependency; package = A80000000000000000000001 /* XCLocalSwiftPackageReference "PiqoKit" */; productName = PiqoProtocol; };
+		A60000000000000000000002 /* PiqoRuntime */ = {isa = XCSwiftPackageProductDependency; package = A80000000000000000000001 /* XCLocalSwiftPackageReference "PiqoKit" */; productName = PiqoRuntime; };
+		A60000000000000000000003 /* PiqoData */ = {isa = XCSwiftPackageProductDependency; package = A80000000000000000000001 /* XCLocalSwiftPackageReference "PiqoKit" */; productName = PiqoData; };
+		A60000000000000000000004 /* PiqoPresentation */ = {isa = XCSwiftPackageProductDependency; package = A80000000000000000000001 /* XCLocalSwiftPackageReference "PiqoKit" */; productName = PiqoPresentation; };
+		A60000000000000000000005 /* Sparkle */ = {isa = XCSwiftPackageProductDependency; package = A80000000000000000000002 /* XCRemoteSwiftPackageReference "Sparkle" */; productName = Sparkle; };
+
+		A70000000000000000000001 /* Build configuration list for PBXProject "Piqo" */ = {isa = XCConfigurationList; buildConfigurations = (A70000000000000000000003 /* Debug */, A70000000000000000000004 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A70000000000000000000002 /* Build configuration list for PBXNativeTarget "Piqo" */ = {isa = XCConfigurationList; buildConfigurations = (A70000000000000000000005 /* Debug */, A70000000000000000000006 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A70000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 6.0;}; name = Debug; };
+		A70000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 6.0;}; name = Release; };
+		A70000000000000000000005 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_ENTITLEMENTS = Piqo/Supporting/Piqo.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_HARDENED_RUNTIME = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Piqo/Supporting/Info.plist; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; MACOSX_DEPLOYMENT_TARGET = 26.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.d9beud.Piqo; PRODUCT_NAME = Piqo; SDKROOT = macosx; SUPPORTED_PLATFORMS = macosx; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; ARCHS = arm64; ONLY_ACTIVE_ARCH = YES; }; name = Debug; };
+		A70000000000000000000006 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_ENTITLEMENTS = Piqo/Supporting/Piqo.entitlements; CODE_SIGN_STYLE = Manual; CURRENT_PROJECT_VERSION = 1; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Piqo/Supporting/Info.plist; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; MACOSX_DEPLOYMENT_TARGET = 26.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.d9beud.Piqo; PRODUCT_NAME = Piqo; SDKROOT = macosx; SUPPORTED_PLATFORMS = macosx; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; ARCHS = arm64; }; name = Release; };
+
+		A80000000000000000000001 /* XCLocalSwiftPackageReference "PiqoKit" */ = {isa = XCLocalSwiftPackageReference; relativePath = Packages/PiqoKit; };
+		A80000000000000000000002 /* XCRemoteSwiftPackageReference "Sparkle" */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/sparkle-project/Sparkle.git"; requirement = {kind = upToNextMajorVersion; minimumVersion = 2.9.6; }; };
+	};
+	rootObject = A50000000000000000000001 /* Project object */;
+}

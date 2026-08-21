@@ -1,0 +1,9 @@
+.build/
+DerivedData/
+.swiftpm/
+Packages/PiqoKit/.build/
+Piqo.xcodeproj/project.xcworkspace/xcuserdata/
+Piqo.xcodeproj/xcuserdata/
+build/
+dist/
+.DS_Store

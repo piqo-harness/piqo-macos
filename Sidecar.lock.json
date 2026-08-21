@@ -1,0 +1,9 @@
+{
+  "version": "0.1.0",
+  "protocol_version": 1,
+  "api_version": "v1",
+  "target": "aarch64-apple-darwin",
+  "minimum_macos": "26.0",
+  "archive_url": "https://github.com/piqo-harness/piqo-server/releases/download/v0.1.0/piqo-server-v0.1.0-macos-arm64.tar.gz",
+  "sha256": "87259bb38b9da9b93da4d65930348c8e26453a66c097b56cf4673759317369bb"
+}

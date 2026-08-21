@@ -6,7 +6,7 @@
 
 ## Contract constraints to address from the start
 
-- Unless the server specifies otherwise in the future, every route is protected by a bearer token (`bearerAuth`, `base64url` format). The application must store it securely and allow it to be replaced.
+- Unless the server specifies otherwise in the future, every route is protected by a bearer token (`bearerAuth`, `base64url` format). The server owns authentication and authorization. If future remote access requires a client-held token, the application must store it securely and allow it to be replaced.
 - Project and session lists use cursor pagination (`cursor`, `limit`); the UI must support incremental loading and an end-of-list state.
 - Long-running generation operations are asynchronous: creating a run returns `202`, and its state and events are then retrieved separately.
 - The real-time feed uses Server-Sent Events (SSE) and accepts `Last-Event-ID`. The client must be able to reconnect without losing events.
@@ -37,7 +37,7 @@
 Goal: make the application able to communicate with the server securely and reliably.
 
 - Typed HTTP client for all public structures, error encoding/decoding, and bearer-token injection.
-- Connection settings stored in the Keychain, a minimal connection screen, and a `health` check.
+- Server connection settings, a minimal connection screen, and a `health` check. Use the macOS Keychain only if a future remote-access flow requires a secret held by the client.
 - Loading, cancellation, non-sensitive logging infrastructure, and decoding unit tests.
 
 **Exit criterion:** a user can configure a server, verify that it is reachable, and receive an actionable diagnostic on failure.
